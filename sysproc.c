@@ -7,6 +7,11 @@
 #include "mmu.h"
 #include "proc.h"
 
+int sys_hello_world(void) {
+  cprintf("hello world !\n");
+  return 0;
+}
+
 int
 sys_fork(void)
 {
