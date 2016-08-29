@@ -1,6 +1,13 @@
 #include "syscall.h"
 #include "traps.h"
 
+.global _start;
+_start:
+	addl $4, %esp
+	call main
+	call exit
+
+
 #define SYSCALL(name) \
   .globl name; \
   name: \
